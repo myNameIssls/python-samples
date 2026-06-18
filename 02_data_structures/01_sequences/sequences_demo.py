@@ -1,19 +1,49 @@
-"""序列数据结构示例：列表、元组、字典、集合"""
+"""序列数据结构示例
 
-numbers = [1, 2, 3, 4, 5]
-numbers.append(6)
-print(f"列表: {numbers}")
-print(f"切片 [1:4]: {numbers[1:4]}")
+本文件演示 Python 内置的四种序列数据类型：
+- 列表（list）：可变的序列，用方括号 [] 表示
+- 元组（tuple）：不可变的序列，用圆括号 () 表示
+- 字典（dict）：键值对集合，用花括号 {} 表示
+- 集合（set）：无序且不重复的元素集合，用花括号 {} 表示
+"""
 
-coordinates = (10.5, 20.3)
-x, y = coordinates
+
+# ==================== 列表（List）====================
+# 列表：有序、可变、可重复的序列
+# 类似其他语言的数组，但功能更强大
+
+numbers = [1, 2, 3, 4, 5]     # 创建列表
+numbers.append(6)              # append()：在末尾添加元素
+
+print(f"列表: {numbers}")             # 输出整个列表
+print(f"切片 [1:4]: {numbers[1:4]}") # 切片：获取索引 1 到 3 的元素（前闭后开）
+
+
+# ==================== 元组（Tuple）====================
+# 元组：有序、不可变的序列
+# 创建后不能修改，常用于保护数据
+
+coordinates = (10.5, 20.3)    # 创建元组（小数坐标）
+x, y = coordinates             # 元组解包：将元组的每个元素赋值给不同变量
 print(f"元组解包: x={x}, y={y}")
 
-student = {"name": "小明", "age": 18, "major": "计算机"}
-student["grade"] = "A"
+
+# ==================== 字典（Dict）====================
+# 字典：键值对（key-value）映射
+# 通过键（key）来访问值（value），键必须是不可变类型
+
+student = {"name": "小明", "age": 18, "major": "计算机"}  # 创建字典
+student["grade"] = "A"         # 添加新的键值对
+
+# 遍历字典：items() 返回所有键值对
 for key, value in student.items():
     print(f"{key}: {value}")
 
-colors = {"red", "blue", "green", "red"}
-print(f"集合（自动去重）: {colors}")
-print(f"共有 {len(colors)} 种颜色")
+
+# ==================== 集合（Set）====================
+# 集合：无序、不重复的元素集合
+# 自动去重，常用于去重或集合运算（交集、并集等）
+
+colors = {"red", "blue", "green", "red"}  # 注意："red" 出现了两次
+print(f"集合（自动去重）: {colors}")       # 输出时只有一个 "red"
+print(f"共有 {len(colors)} 种颜色")       # len()：获取集合中元素的数量
