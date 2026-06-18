@@ -1,0 +1,41 @@
+# IntelliJ IDEA / JetBrains 系列
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# PyCharm 项目文件
+.idea/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Python 虚拟环境
+venv/
+env/
+.venv/
+.env/
+
+# Python 编译产物
+*.pyc
+__pycache__/
+
+# 日志文件
+*.log
+
+# 编辑器临时文件
+*~
+*.swp
+*.swo
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 测试覆盖率
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Matplotlib 输出的图表（示例文件）
+*.png
